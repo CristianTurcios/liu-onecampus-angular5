@@ -10,7 +10,6 @@ import { SupportIntroComponent } from './components/support/support-intro/suppor
 import { SupportDescriptionComponent } from './components/support/support-description/support-description.component';
 import { SuccessTipsComponent } from './components/support/success-tips/success-tips.component';
 import { SupportUniversitiesComponent } from './components/support/support-universities/support-universities.component';
-import { SupportClaudioDirective } from './components/support/support-claudio.directive';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { SupportClaudioDirective } from './components/support/support-claudio.di
     SupportDescriptionComponent,
     SuccessTipsComponent,
     SupportUniversitiesComponent,
-    SupportClaudioDirective
   ],
   imports: [
     BrowserModule,
