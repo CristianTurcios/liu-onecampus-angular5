@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'support',
-  templateUrl: './support.component.html',
-  // styleUrls: ['./support.component.css']
+  templateUrl: './support.component.html'
 })
 export class SupportComponent implements OnInit {
 
