@@ -1,41 +1,24 @@
 <div>
   <h1>FIND HELP FROM YOUR UNIVERSITY</h1>
-  <div class="dropdown-university--blue">
+  <div class="dropdown-university--blue" *ngIf="showUniversities">
     <input id="dropdownuniversity" type="checkbox">
     <label for="dropdownuniversity">
       <span class="dropdown-gray-label">
-        supportUniversitiesCtrl.data.description
+         Choose University
       </span>
       <i class="icon-chevron-up-simple pull-right"></i>
     </label>
-    <ul>
-      <li>
-        <span>university.title</span>
-      </li>
-      <li>
-        <span>university.title</span>
-      </li>
-      <li>
-        <span>university.title</span>
-      </li>
-      <li>
-        <span>university.title</span>
-      </li>
-      <li>
-        <span>university.title</span>
-      </li>
-    </ul>
+    <ul><li *ngFor="let university of universitiesList" (click)="selectUniversity(university)"><span>{{university.title}}</span></li></ul>
   </div>
 
-  <!-- <div class="dropdown-university--blue" ng-if="supportUniversitiesCtrl.showHelpSupport">
+  <div class="dropdown-university--blue" *ngIf="!showUniversities">
     <input id="university" type="checkbox" ng-checked="true" ng-disabled="true">
     <label for="university">
-      <span class="dropdown-gray-label" ng-click="supportUniversitiesCtrl.changeUniversity()">
-        {{supportUniversitiesCtrl.selectedUniversity.title || supportUniversitiesCtrl.selectedUniversity.name}}
-      </span>
-      <i class="icon-close-simple pull-right" ng-if="!supportUniversitiesCtrl.sessionExists" ng-click="supportUniversitiesCtrl.closeHelpSupport()">
-      </i>
+      <span class="dropdown-gray-label" (click)="changeUniversity()">{{selectedUniversity.title || selectedUniversity.name}}</span>
+      
+      <i class="icon-close-simple pull-right" ng-if="!supportUniversitiesCtrl.sessionExists" ng-click="supportUniversitiesCtrl.closeHelpSupport()"></i>
     </label>
+    
     <div class="content-box-university--white auth-version">
       <a class="live-chat--box" ng-click="supportUniversitiesCtrl.openZendesk()">
         <h3>{{supportUniversitiesCtrl.helpSupport._title}}</h3>
@@ -43,5 +26,5 @@
       </a>
       <div ng-bind-html="supportUniversitiesCtrl.helpSupport.body"></div>
     </div>
-  </div> -->
+  </div>
 </div>
