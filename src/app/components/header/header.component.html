@@ -15,7 +15,7 @@
 					'one-nav__menu-item--selected': oneNavCtrl.currentPageKey == topLevelItem.id
         }" ng-mouseenter="oneNavCtrl.showMenu(topLevelItem.id)" ng-mouseleave="oneNavCtrl.delayHideMenu(topLevelItem.id)"> 
         <!-- ngIf: topLevelItem.sref -->
-        <a ng-if="topLevelItem.sref" ui-sref="layout.support" class="ng-scope" href="#/support">
+        <a ng-if="topLevelItem.sref" [routerLink]="['/support']">
           <span class="ng-binding">Help &amp; support</span>
         </a>
       </div>
