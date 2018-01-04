@@ -5,13 +5,15 @@ import { RoutesContainer, RoutesProvider } from './app.router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { ForInstitutionsComponent } from './for-institutions/for-institutions.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ForInstitutionsComponent
   ],
   imports: [
     BrowserModule,
