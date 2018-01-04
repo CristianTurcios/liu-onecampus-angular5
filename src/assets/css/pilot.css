@@ -1,0 +1,28 @@
+.main-column-right .card-course-learning {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("/assets/images/courses/bg-learning-series.jpg");
+  background-size: cover;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}
+.main-column-right .card-course-learning .course-code {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+.main-column-right .card-course-learning .course-title {
+  font-size:1.625rem;
+  letter-spacing: 0.54px;
+  font-weight: 900;
+  line-height: 1.384615385;
+  margin-bottom:1rem;
+}
+.card-type.svgicon-learning-series span {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2233%22%20height%3D%2233%22%20viewBox%3D%220%200%2033%2033%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ctitle%3ELearning%20Experience%3C/title%3E%3Cpath%20d%3D%22M3.4%2011.3322h7.9336V3.3997H3.4v7.9325zm9.6337%203.3997H1.7c-.9384%200-1.7-.7616-1.7-1.7V1.6998C0%20.761.7616%200%201.7%200h11.3337c.939%200%201.7.761%201.7%201.6998V13.032c0%20.9384-.761%201.7-1.7%201.7zM3.4%2029.4637h7.9336v-7.9326H3.4v7.9326zm9.6337%203.3996H1.7c-.9384%200-1.7-.7615-1.7-1.7004V19.8314c0-.939.7616-1.7%201.7-1.7h11.3337c.939%200%201.7.761%201.7%201.7V31.163c0%20.939-.761%201.7004-1.7%201.7004zm8.5002-21.5312h7.9335V3.3997H21.534v7.9325zm9.6335%203.3997H19.834c-.9386%200-1.7002-.7616-1.7002-1.7V1.6998c0-.9388.7616-1.6998%201.7-1.6998h11.3337c.939%200%201.7.761%201.7%201.6998V13.032c0%20.9384-.761%201.7-1.7%201.7zM21.534%2029.4637h7.9335v-7.9326H21.534v7.9326zm9.6335%203.3996H19.834c-.9386%200-1.7002-.7615-1.7002-1.7004V19.8314c0-.939.7616-1.7%201.7-1.7h11.3337c.939%200%201.7.761%201.7%201.7V31.163c0%20.939-.761%201.7004-1.7%201.7004z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.8%22/%3E%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  background-position: 5px 6px;
+}
+.card--learningexp .card-title:before {
+  display: none;
+}
