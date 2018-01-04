@@ -8,18 +8,21 @@ import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 
 import { HomeComponent } from './components/home/home.component';
-
+import { IntroComponent } from './components/home/intro/intro.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
-    RoutesContainer
+    RoutesContainer,
+    HttpModule
   ],
   providers: [RoutesProvider],
   bootstrap: [AppComponent]
