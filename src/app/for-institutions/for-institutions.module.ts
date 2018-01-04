@@ -9,10 +9,17 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ForInstitutionsRoutingModule
-  ],
-  declarations: [ForInstitutionsComponent, IntroComponent, SchoolsComponent, EngageComponent, TestimonialComponent, GetStartedComponent]
+    imports: [
+        CommonModule,
+        ForInstitutionsRoutingModule
+    ],
+    declarations: [
+        ForInstitutionsComponent,
+        IntroComponent,
+        SchoolsComponent,
+        EngageComponent,
+        TestimonialComponent,
+        GetStartedComponent
+    ]
 })
 export class ForInstitutionsModule { }

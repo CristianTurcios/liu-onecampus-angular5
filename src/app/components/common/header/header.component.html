@@ -1,77 +1,81 @@
-<header class="one-nav"> 
-  <div class="one-nav__inner"> 
-    <a class="one-nav__logo" > 
-      <img src="./assets/images/global/logo-onecampus-header.png"> 
-    </a> 
-    <div class="one-nav__menu-main"> 
-      <!-- ngIf: oneNavCtrl.enableSearch --> 
-      <!-- ngRepeat: topLevelItem in oneNavCtrl.navStructure -->
-      <div class="one-nav__menu-item ng-scope">
-        <a class="ng-scope" href="#/institutions">
-          <span class="ng-binding">For Institutions</span>
+<header class="one-nav">
+    <div class="one-nav__inner">
+        <a class="one-nav__logo">
+            <img src="./assets/images/global/logo-onecampus-header.png">
         </a>
-      </div>
-      <div ng-repeat="topLevelItem in oneNavCtrl.navStructure" class="one-nav__menu-item ng-scope" ng-class="{
-					'one-nav__menu-item--selected': oneNavCtrl.currentPageKey == topLevelItem.id
-        }" ng-mouseenter="oneNavCtrl.showMenu(topLevelItem.id)" ng-mouseleave="oneNavCtrl.delayHideMenu(topLevelItem.id)"> 
-        <!-- ngIf: topLevelItem.sref -->
-        <a ng-if="topLevelItem.sref" ui-sref="layout.support" class="ng-scope" href="#/support">
-          <span class="ng-binding">Help &amp; support</span>
-        </a>
-      </div>
-      <div class="one-nav__mobile-lang">
-        <ul class="one-lang-toggle"> 
-          <li class="is-selected">
-            <button type="button">
-              <span class="ng-binding">Eng</span>
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <span class="ng-binding">Spa</span>
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <span class="ng-binding">Por</span>
-            </button>
-          </li>
-        </ul>
-      </div>
-      <ul class="one-nav__main-right ng-scope"> 
-        <li class="one-nav__menu-item ng-scope">
-          <a class="ng-scope" href="#/redirectLogin">
-            <span class="ng-binding">Create your Passport</span>
-          </a>
-        </li>
-        <li class="one-nav__menu-item ng-scope">
-          <a class="ng-scope" href="#/redirectLogin">
-            <span class="ng-binding">Login</span>
-          </a>
-        </li>
-      </ul>
+        <div class="one-nav__menu-main">
+            <div class="one-nav__menu-item ng-scope">
+                <a class="ng-scope" routerLink="/for-institutions">
+                    <span class="ng-binding">For Institutions</span>
+                </a>
+            </div>
+            <div ng-repeat="topLevelItem in oneNavCtrl.navStructure" class="one-nav__menu-item ng-scope"
+                ng-class="{'one-nav__menu-item--selected': oneNavCtrl.currentPageKey == topLevelItem.id}"
+                ng-mouseenter="oneNavCtrl.showMenu(topLevelItem.id)"
+                ng-mouseleave="oneNavCtrl.delayHideMenu(topLevelItem.id)">
+                <a ng-if="topLevelItem.sref" ui-sref="layout.support" class="ng-scope" href="#/support">
+                    <span class="ng-binding">Help &amp; support</span>
+                </a>
+            </div>
+            <div class="one-nav__mobile-lang">
+                <ul class="one-lang-toggle">
+                    <li class="is-selected">
+                        <button type="button">
+                            <span class="ng-binding">Eng</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <span class="ng-binding">Spa</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <span class="ng-binding">Por</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <ul class="one-nav__main-right ng-scope">
+                <li class="one-nav__menu-item ng-scope">
+                    <a class="ng-scope" href="#/redirectLogin">
+                        <span class="ng-binding">Create your Passport</span>
+                    </a>
+                </li>
+                <li class="one-nav__menu-item ng-scope">
+                    <a class="ng-scope" href="#/redirectLogin">
+                        <span class="ng-binding">Login</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="one-nav__lang">
+            <div class="one-lang-select">
+                <button type="button" class="one-lang-select__current">
+                    <span class="ng-binding">EN</span>
+                    <i class="one-nav-arrow"></i>
+                </button>
+                <ul class="one-lang-select__opts ng-hide">
+                    <li class="is-selected">
+                        <a>
+                            <span class="ng-binding">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="ng-binding">Spanish</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="ng-binding">Portuguese</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="one-nav__menu-trigger">
+            <span class="one-nav__hamburger"></span>
+        </button>
     </div>
-    <div class="one-nav__lang">
-      <div class="one-lang-select"> 
-        <button type="button" class="one-lang-select__current">
-          <span class="ng-binding">EN</span>
-          <i class="one-nav-arrow"></i>
-        </button> 
-        <ul class="one-lang-select__opts ng-hide">
-          <li class="is-selected">
-            <a><span class="ng-binding">English</span></a>
-          </li>
-          <li>
-            <a><span class="ng-binding">Spanish</span></a>
-          </li>
-          <li>
-            <a><span class="ng-binding">Portuguese</span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <button type="button" class="one-nav__menu-trigger" > 
-      <span class="one-nav__hamburger"></span> 
-    </button>
-  </div> 
 </header>
