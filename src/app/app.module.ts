@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import { RoutesContainer, RoutesProvider } from './app.router';
 
 import { AppComponent } from './app.component';
-
 import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
-
 import { HomeComponent } from './components/home/home.component';
-import { ForInstitutionsComponent } from './for-institutions/for-institutions.component';
+
+import { ForInstitutionsModule } from './for-institutions/for-institutions.module';
 
 
 @NgModule({
@@ -16,12 +15,12 @@ import { ForInstitutionsComponent } from './for-institutions/for-institutions.co
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    ForInstitutionsComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    RoutesContainer
+    RoutesContainer,
+    ForInstitutionsModule
   ],
   providers: [RoutesProvider],
   bootstrap: [AppComponent]
