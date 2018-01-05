@@ -1,0 +1,32 @@
+<div *ngIf="!isLoading">
+  <h1>{{findHelpFromYourUniversity._title}}</h1>
+  <div class="dropdown-university--blue" *ngIf="showUniversities">
+    <input id="dropdownuniversity" type="checkbox" [checked]="displaySelect">
+    <label for="dropdownuniversity">
+      <span class="dropdown-gray-label">{{findHelpFromYourUniversity.description}}</span>
+      <i class="icon-chevron-up-simple pull-right"></i>
+    </label>
+    <ul>
+      <li *ngFor="let university of universitiesList" (click)="selectUniversity(university)">
+        <span>{{university.title}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="dropdown-university--blue" *ngIf="!showUniversities && !isLoading">
+    <input id="university" type="checkbox" [checked]="true" [disabled]="true">
+    <label for="university">
+      <span class="dropdown-gray-label" (click)="changeUniversity()">{{selectedUniversity.title || selectedUniversity.name}}</span>
+
+      <i class="icon-close-simple pull-right" (click)="closeHelpSupport()"></i>
+    </label>
+
+    <div class="content-box-university--white auth-version">
+      <a class="live-chat--box" ng-click="supportUniversitiesCtrl.openZendesk()">
+        <h3>{{helpAndSupport._title}} </h3>
+        <i class="icon-chat"></i>
+      </a>
+      <div [innerHTML]="helpAndSupport.body"></div>
+    </div>
+  </div>
+</div>

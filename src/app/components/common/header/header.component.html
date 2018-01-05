@@ -9,11 +9,9 @@
                     <span class="ng-binding">For Institutions</span>
                 </a>
             </div>
-            <div ng-repeat="topLevelItem in oneNavCtrl.navStructure" class="one-nav__menu-item ng-scope"
-                ng-class="{'one-nav__menu-item--selected': oneNavCtrl.currentPageKey == topLevelItem.id}"
-                ng-mouseenter="oneNavCtrl.showMenu(topLevelItem.id)"
-                ng-mouseleave="oneNavCtrl.delayHideMenu(topLevelItem.id)">
-                <a ng-if="topLevelItem.sref" ui-sref="layout.support" class="ng-scope" href="#/support">
+            <div ng-repeat="topLevelItem in oneNavCtrl.navStructure" class="one-nav__menu-item ng-scope" ng-class="{'one-nav__menu-item--selected': oneNavCtrl.currentPageKey == topLevelItem.id}"
+                ng-mouseenter="oneNavCtrl.showMenu(topLevelItem.id)" ng-mouseleave="oneNavCtrl.delayHideMenu(topLevelItem.id)">
+                <a ng-if="topLevelItem.sref" routerLink="/support">
                     <span class="ng-binding">Help &amp; support</span>
                 </a>
             </div>

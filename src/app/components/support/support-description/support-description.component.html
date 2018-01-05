@@ -1,0 +1,5 @@
+<div *ngIf="!isLoading">
+  <h1 class="huge-title--blue">{{data._title}}</h1>
+  <span class="upper-subtitle--blue" [innerHTML]="data.short_description"></span>
+  <div class="list-indentation" [innerHTML]="data.description"></div>
+</div>

@@ -1,0 +1,42 @@
+<div *ngIf="!isLoading">
+  <div class="container">
+    <h2 class="huge-title--blue">{{data._title}}</h2>
+  </div>
+
+  <div class="container">
+    <p>{{data.description}}</p>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let video of data.videos; let i = index">
+      <div class="row" *ngIf="i % 3 === 0">
+        <div class="col-sm-4" *ngIf="isDefined(data.videos[i])">
+          <div class="video-block">
+            <button type="button" class="video-trigger video-trigger__shaded video-trigger__block" (click)="openModal(data.videos[i])">
+              <img [src]="data.videos[i].image_url" width="161" height="84" alt="" *ngIf="isDefined(data.videos[i].image_url)">
+              <span class="video-trigger--placeholder" *ngIf="!isDefined(data.videos[i].image_url)"></span>
+            </button>
+            <h4 class="one-hdg one-hdg__4 video-block__title">{{data.videos[i]._title}}</h4>
+          </div>
+        </div>
+        <div class="col-sm-4" *ngIf="isDefined(data.videos[i + 1])">
+          <div class="video-block">
+            <button type="button" class="video-trigger video-trigger__shaded video-trigger__block" (click)="openModal(data.videos[i + 1])">
+              <img [src]="data.videos[i + 1].image_url" width="161" height="84" alt="" *ngIf="isDefined(data.videos[i + 1].image_url)">
+              <span class="video-trigger--placeholder" *ngIf="!isDefined(data.videos[i + 1].image_url)"></span>
+            </button>
+            <h4 class="one-hdg one-hdg__4 video-block__title">{{data.videos[i + 1]._title}}</h4>
+          </div>
+        </div>
+        <div class="col-sm-4" *ngIf="isDefined(data.videos[i + 2])">
+          <div class="video-block">
+            <button type="button" class="video-trigger video-trigger__shaded video-trigger__block" (click)="openModal(data.videos[i + 2])">
+              <img [src]="data.videos[i + 2].image_url" width="161" height="84" alt="" *ngIf="isDefined(data.videos[i + 2].image_url)">
+              <span class="video-trigger--placeholder" *ngIf="!isDefined(data.videos[i + 2].image_url)"></span>
+            </button>
+            <h4 class="one-hdg one-hdg__4 video-block__title">{{data.videos[i + 2]._title}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
