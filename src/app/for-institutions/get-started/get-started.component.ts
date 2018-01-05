@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-for-institutions-get-started',
+  selector: 'for-institutions-get-started',
   templateUrl: './get-started.component.html',
   styleUrls: ['./get-started.component.css']
 })

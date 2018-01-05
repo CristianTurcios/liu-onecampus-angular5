@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-for-institutions-engage',
+  selector: 'for-institutions-engage',
   templateUrl: './engage.component.html',
   styleUrls: ['./engage.component.css']
 })
