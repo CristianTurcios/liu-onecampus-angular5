@@ -14,7 +14,9 @@ export class WagtailProvider {
             this.language = 'en';
             this.wagtailApi = `${environment.wagtailApi}`;
     }
-
+    set lang(lang: String){
+      this.language = lang;
+    }
     getPage(slug, type) {
         const url = `${this.wagtailApi}/${this.language}/api/v2/pages/`;
         const search = new URLSearchParams();
