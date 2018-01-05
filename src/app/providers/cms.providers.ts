@@ -26,9 +26,13 @@ export class WagtailProvider {
             url, {search: search}).map(response => response.json());
     }
 
-    getChildren(parentId) {
-        const url = `${this.wagtailApi}/${this.language}/api/v2/pages/${parentId}`;
-        return this._http.get(
-            url).map(response => response.json());
+    getChildren(parentId, type) {
+      const url = `${this.wagtailApi}/${this.language}/api/v2/pages/`;
+      const search = new URLSearchParams();
+      search.set('child_of', parentId);
+      search.set('type', type);
+      search.set('fields', '*');
+      return this._http.get(
+        url, {search: search}).map(response => response.json());
     }
 }

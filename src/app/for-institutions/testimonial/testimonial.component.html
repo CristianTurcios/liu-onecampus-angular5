@@ -1,40 +1,14 @@
 <section class="institutions--testimonial">
     <div class="container">
         <div class="row">
-            <div class="one-text-mod institutions--testimonial__left col-lg-8 col-md-6 col-sm-12 col-xs-12">
-                <h6>
-                    TESTIMONIAL
-                </h6>
-                <h1>
-                    UNIVERSITY LEADERS SHARE THEIR THOUGHTS
-                </h1>
-                <p>
-                    OneCampus® by Laureate encourages both faculty and students to question their perspectives about big issues by interacting
-                    with groups of students from other cultures.
-                    <br>
-                </p>
-                <p>
-                    It's an easy, quick and valuable way to internationalize a classroom. Having international students in the classrooms also
-                    raises the level of discourse across the board and gives the classroom a dynamic element that encourages
-                    deeper reflection.
-                </p>
-                <br>
-                <b>
-                    Lulu Williamson, Ph.D
-                </b>
-                <br> OneCampus® by Laureate Coordinator for Walden University
-            </div>
+            <div class="one-text-mod institutions--testimonial__left col-lg-8 col-md-6 col-sm-12 col-xs-12" [innerHtml]="testimonialData.description"></div>
             <div class="institutions--testimonial__right col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <button type="button" class="btn__start-episode">
                     <svg width="106" height="106" viewBox="0 0 106 106" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linejoin="round" d="M83 53.8333L36.3333 78V29.6667z" stroke-width="6" stroke="#FFF" fill="none" fill-rule="evenodd"></path>
                         <circle class="outer-circle" cx="53" cy="53" r="50" stroke="#FFF" fill="none" stroke-linecap="round" stroke-width="6"></circle>
                     </svg>
-                    <h5>
-                        <p>
-                            Watch the video
-                        </p>
-                    </h5>
+                    <h5 [innerHtml]="testimonialData.short_description"></h5>
                 </button>
             </div>
         </div>

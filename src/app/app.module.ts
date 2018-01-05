@@ -11,6 +11,9 @@ import { ForInstitutionsModule } from './for-institutions/for-institutions.modul
 import { MarketingModule } from './marketing/marketing.module';
 import { SupportModule } from './components/support/support.module';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from './app.translate.factory';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,15 @@ import { SupportModule } from './components/support/support.module';
     HttpModule,
     ForInstitutionsModule,
     MarketingModule,
-    SupportModule
+    SupportModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [RoutesProvider],
   bootstrap: [AppComponent]

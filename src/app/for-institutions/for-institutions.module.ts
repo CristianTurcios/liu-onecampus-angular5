@@ -7,6 +7,7 @@ import { SchoolsComponent } from './schools/schools.component';
 import { EngageComponent } from './engage/engage.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { SchoolCardComponent } from './schools/school-card/school-card.component';
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
         SchoolsComponent,
         EngageComponent,
         TestimonialComponent,
-        GetStartedComponent
+        GetStartedComponent,
+        SchoolCardComponent
     ]
 })
 export class ForInstitutionsModule { }
