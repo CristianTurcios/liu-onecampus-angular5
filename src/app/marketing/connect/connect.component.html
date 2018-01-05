@@ -1,0 +1,44 @@
+<div class="onecampus-universities">
+    <div class="container">
+        <div class="row" *ngIf="connectPage" >
+            <div class="col-md-offset-1 col-md-5 onecampus-universities--info">
+                <div class="one-text-mod" [innerHtml]="connectPage.description"></div>
+            </div>
+            <div class="col-md-6 onecampus-universities--cards">
+                <div class="hdg hdg__5 hdg__color-inherit" [innerHtml]="connectPage.short_description"></div>
+                <div class="homepage-card-container">
+                    <div class="homepage--card homepage--card-why">
+                        <div class="card-user-avatar-container">
+                            <div class="card-user-avatar">
+                                <img src="./assets/images/homepage/avatar-al.png">
+                            </div>
+                        </div>
+                        <div class="card-user-info-container">
+                            <h1>Arturo Liang</h1>
+                            <p>Nursing</p>
+                            <img src="./assets/images/homepage/logo-torrens.jpg">
+                        </div>
+                        <div class="card-user-why-container">
+                            <p>Because you both are interested in <b>health sciences</b></p>
+                        </div>
+                    </div>
+                    <div class="homepage--card homepage--card-why">
+                        <div class="card-user-avatar-container">
+                            <div class="card-user-avatar">
+                                <img src="./assets/images/homepage/avatar-aj.png">
+                            </div>
+                        </div>
+                        <div class="card-user-info-container">
+                            <h1>Amy Jacobs</h1>
+                            <p>Engineering</p>
+                            <img src="./assets/images/homepage/logo-uvm.jpg">
+                        </div>
+                        <div class="card-user-why-container">
+                            <p>Because you both attend <b>UVM</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
