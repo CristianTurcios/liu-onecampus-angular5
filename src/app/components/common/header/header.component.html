@@ -6,7 +6,7 @@
         <div class="one-nav__menu-main">
             <div class="one-nav__menu-item ng-scope">
                 <a class="ng-scope" routerLink="/for-institutions">
-                    <span class="ng-binding">For Institutions</span>
+                    <span>For Institutions</span>
                 </a>
             </div>
             <div ng-repeat="topLevelItem in oneNavCtrl.navStructure" class="one-nav__menu-item ng-scope"
@@ -14,24 +14,24 @@
                 ng-mouseenter="oneNavCtrl.showMenu(topLevelItem.id)"
                 ng-mouseleave="oneNavCtrl.delayHideMenu(topLevelItem.id)">
                 <a ng-if="topLevelItem.sref" ui-sref="layout.support" class="ng-scope" href="#/support">
-                    <span class="ng-binding">Help &amp; support</span>
+                    <span>Help &amp; support</span>
                 </a>
             </div>
             <div class="one-nav__mobile-lang">
                 <ul class="one-lang-toggle">
                     <li class="is-selected">
                         <button type="button">
-                            <span class="ng-binding">Eng</span>
+                            <span>Eng</span>
                         </button>
                     </li>
                     <li>
                         <button type="button">
-                            <span class="ng-binding">Spa</span>
+                            <span>Spa</span>
                         </button>
                     </li>
                     <li>
                         <button type="button">
-                            <span class="ng-binding">Por</span>
+                            <span>Por</span>
                         </button>
                     </li>
                 </ul>
@@ -39,37 +39,25 @@
             <ul class="one-nav__main-right ng-scope">
                 <li class="one-nav__menu-item ng-scope">
                     <a class="ng-scope" href="#/redirectLogin">
-                        <span class="ng-binding">Create your Passport</span>
+                        <span>Create your Passport</span>
                     </a>
                 </li>
                 <li class="one-nav__menu-item ng-scope">
                     <a class="ng-scope" href="#/redirectLogin">
-                        <span class="ng-binding">Login</span>
+                        <span>Login</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="one-nav__lang">
-            <div class="one-lang-select">
+            <div class="one-lang-select" (click)="toggleLanguageMenu()">
                 <button type="button" class="one-lang-select__current">
-                    <span class="ng-binding">EN</span>
+                    <span [innerHtml]='selectedLanguage | uppercase'></span>
                     <i class="one-nav-arrow"></i>
                 </button>
-                <ul class="one-lang-select__opts ng-hide">
-                    <li class="is-selected">
-                        <a>
-                            <span class="ng-binding">English</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <span class="ng-binding">Spanish</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <span class="ng-binding">Portuguese</span>
-                        </a>
+                <ul class="one-lang-select__opts" [ngClass]="{'ng-hide': !showLanguages}">
+                    <li *ngFor="let lang of languages" (click)="changeLanguage(lang)" [ngClass]="{'is-selected': selectedLanguage === lang}">
+                        <a><span [innerHtml]="lang | uppercase"></span></a>
                     </li>
                 </ul>
             </div>

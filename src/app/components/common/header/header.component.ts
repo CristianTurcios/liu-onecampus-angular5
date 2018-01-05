@@ -1,14 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html'
+    selector: 'app-header',
+    templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+    public languages: any = [
+        'en',
+        'es',
+        'pt'
+    ];
+    public showLanguages = false;
+    public selectedLanguage = 'en';
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() { }
+
+    toggleLanguageMenu() {
+        this.showLanguages = !this.showLanguages;
+    }
+
+    changeLanguage(lang) {
+        this.selectedLanguage = lang;
+    }
 
 }
