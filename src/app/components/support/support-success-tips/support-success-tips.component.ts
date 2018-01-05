@@ -9,6 +9,7 @@ import { WagtailProvider } from '../../../providers/cms.providers';
 })
 export class SupportSuccessTipsComponent implements OnInit {
   private data: any;
+  private videos: any;
   private isLoading: boolean;
 
   constructor(private _pagesProvider: WagtailProvider) { }
@@ -18,21 +19,30 @@ export class SupportSuccessTipsComponent implements OnInit {
     this.isLoading = true;
     this._pagesProvider.getPage('support-success-tips', 'home.Folder').subscribe(result => {
       this.data = result.items[0] || {};
-      if (this.data.id) {
-        this._pagesProvider.getChildren(`?child_of=${this.data.id}&fields=*&type=home.Video`).subscribe(result => {
+      
+      if(this.data.id){
+          this._pagesProvider.getChildren(`?child_of=${this.data.id}&fields=*&type=home.Video`).subscribe(result => {
           this.data.videos = result.items || [];
-          console.log('result', this.data);
           this.isLoading = false;
         }, error => {
           const errorMessage = <any>error;
           console.log(errorMessage);
         });
+
       }
 
     }, error => {
       const errorMessage = <any>error;
       console.log(errorMessage);
     });
+  }
+
+  openModal(video) {
+    console.log('llego', video);
+  }
+
+  isDefined(element){
+    return element !== undefined;
   }
 
 }
