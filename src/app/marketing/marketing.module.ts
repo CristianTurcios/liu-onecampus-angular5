@@ -6,6 +6,7 @@ import { MarketingRoutingModule } from './marketing.routing';
 import { MarketingIntroComponent } from './intro/intro.component';
 import { MarketingLearningSeriesComponent } from './learning-series/learning-series.component';
 import { MarketingCoursesAndProgramsComponent } from './courses-programs/courses-programs.component';
+import { MakertingPassportComponent } from './passport/passport.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { MarketingCoursesAndProgramsComponent } from './courses-programs/courses
         MarketingComponent,
         MarketingIntroComponent,
         MarketingLearningSeriesComponent,
-        MarketingCoursesAndProgramsComponent
+        MarketingCoursesAndProgramsComponent,
+        MakertingPassportComponent
     ]
 })
 export class MarketingModule { }
