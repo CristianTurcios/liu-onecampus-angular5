@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WagtailProvider } from '../../../providers/cms.providers';
+import { WagtailProvider } from '../../providers/cms.providers';
 
 @Component({
     selector: 'app-home-intro',
