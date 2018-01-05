@@ -2,50 +2,15 @@
     <div class="container">
         <div class="one-text-mod">
             <div class="one-text-mod--item one-text-mod--item__sm">
-                <div class="hdg hdg__5 hdg__color-inherit dashboard-slide__description"> JOIN ONECAMPUS® BY LAUREATE </div>
+                <div class="hdg hdg__5 hdg__color-inherit dashboard-slide__description" [innerHtml]="introPage._title"></div>
             </div>
-            <div class="one-text-mod--item one-text-mod--item__lg position-relative">
-                <h2 class="hdg hdg__biggest hdg__color-inherit hdg__upper">
-                    <h2>
-                        PROVIDE YOUR STUDENTS AN OPPORTUNITY TO LEARN, ENGAGE, AND CONNECT WITH OTHER LAUREATE STUDENTS ACROSS THE WORLD!
-                    </h2>
-                </h2>
-            </div>
+            <div class="one-text-mod--item one-text-mod--item__lg position-relative" [innerHtml]="introPage.description"></div>
         </div>
     </div>
     <div class="institutions--header_info">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info-container--cms">
-                    <h4>
-                        Exclusive membership opportunities available
-                    </h4>
-                    <ul>
-                        <li>
-                            Expand available courses to your students through access to the OneCampus® by Laureate International Course Exchange
-                            <br>
-                        </li>
-                        <li>
-                            Help your students to gain an international perspective through collaboration with students and faculty around the globe.
-                            <br>
-                        </li>
-                        <li>
-                            Increase your reputation as a multi-cultural university.
-                            <br>
-                        </li>
-                    </ul>
-                    <p>
-                    </p>
-                    <p>
-                    </p>
-                    <p>
-                        <a href="https://onecampus.laureate.net/#/search?contentType=courses&amp;language=en">
-                            Explore Available Courses
-                        </a>
-                    </p>
-                    <p>
-                    </p>
-                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info-container--cms" [innerHtml]="introPage.short_description"></div>
             </div>
         </div>
     </div>

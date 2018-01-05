@@ -26,8 +26,8 @@ export class WagtailProvider {
             url, {search: search}).map(response => response.json());
     }
 
-    getChildren(parentId) {
-        const url = `${this.wagtailApi}/${this.language}/api/v2/pages/${parentId}`;
+    getChildren(parentId, type) {
+        const url = `${this.wagtailApi}/${this.language}/api/v2/pages/?child_of=${parentId}&type=${type}&fields=*`;
         return this._http.get(
             url).map(response => response.json());
     }
