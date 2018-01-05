@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
     public languages: any = [
         'en',
@@ -14,16 +15,19 @@ export class HeaderComponent implements OnInit {
     public showLanguages = false;
     public selectedLanguage = 'en';
 
-    constructor() { }
-
-    ngOnInit() { }
+    private translateService: TranslateService;
+    constructor(translateService: TranslateService) {
+      this.translateService = translateService;
+    }
 
     toggleLanguageMenu() {
         this.showLanguages = !this.showLanguages;
     }
 
-    changeLanguage(lang) {
-        this.selectedLanguage = lang;
+    changeLanguage(language: string): void {
+        this.selectedLanguage = language;
+        this.translateService.use(language).subscribe(() => {
+          // this.loadMenus();
+        });
     }
-
 }
