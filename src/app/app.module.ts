@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { IntroComponent } from './components/home/intro/intro.component';
+import { HomeIntroComponent } from './components/home/intro/intro.component';
+import { HomeLearningSeriesComponent } from './components/home/learning-series/learning-series.component';
 
 import { ForInstitutionsModule } from './for-institutions/for-institutions.module';
 
@@ -17,7 +18,8 @@ import { ForInstitutionsModule } from './for-institutions/for-institutions.modul
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    IntroComponent
+    HomeIntroComponent,
+    HomeLearningSeriesComponent
   ],
   imports: [
     BrowserModule,
