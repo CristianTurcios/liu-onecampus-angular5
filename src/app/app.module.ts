@@ -9,6 +9,9 @@ import { FooterComponent } from './components/common/footer/footer.component';
 
 import { ForInstitutionsModule } from './for-institutions/for-institutions.module';
 import { MarketingModule } from './marketing/marketing.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from './app.translate.factory';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,15 @@ import { MarketingModule } from './marketing/marketing.module';
     RoutesContainer,
     HttpModule,
     ForInstitutionsModule,
-    MarketingModule
+    MarketingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [RoutesProvider],
   bootstrap: [AppComponent]
