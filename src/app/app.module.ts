@@ -6,23 +6,22 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { IntroComponent } from './components/home/intro/intro.component';
-import { SupportModule } from './components/support/support.module';
+
+import { ForInstitutionsModule } from './for-institutions/for-institutions.module';
+import { MarketingModule } from './marketing/marketing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    IntroComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     RoutesContainer,
     HttpModule,
-    SupportModule
+    ForInstitutionsModule,
+    MarketingModule
   ],
   providers: [RoutesProvider],
   bootstrap: [AppComponent]

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { WagtailProvider } from '../../../providers/cms.providers';
+import { WagtailProvider } from '../../providers/cms.providers';
 
 @Component({
-    selector: 'app-intro',
+    selector: 'app-home-intro',
     templateUrl: './intro.component.html',
     providers: [WagtailProvider]
 })
-export class IntroComponent implements OnInit {
+export class MarketingIntroComponent implements OnInit {
+    public introPage: any = '';
 
     constructor (
         private _pagesProvider: WagtailProvider
@@ -14,7 +15,9 @@ export class IntroComponent implements OnInit {
 
     ngOnInit() {
         this._pagesProvider.getPage('home-intro', 'home.Video').subscribe(result => {
-            console.log(result);
+            if (result.items.length === 1) {
+                this.introPage = result.items[0];
+            }
         }, error => {
             const errorMessage = <any>error;
             console.log(errorMessage);

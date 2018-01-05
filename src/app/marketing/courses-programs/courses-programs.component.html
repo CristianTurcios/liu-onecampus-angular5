@@ -1,0 +1,40 @@
+<div class="onecampus-online-courses">
+    <div class="container">
+        <div class="row" *ngIf="coursesAndProgramsPage">
+            <div class="col-md-offset-1 col-md-5 onecampus-online-courses--info">
+                <div class="one-text-mod" [innerHtml]="coursesAndProgramsPage.description"></div>
+            </div>
+            <div class="col-md-6 onecampus-online-courses--cards">
+                <div class="hdg hdg__5" [innerHtml]="coursesAndProgramsPage.short_description"></div>
+                <div class="card-resource-container">
+                    <div class="card-resource-content__paper">
+                        <div class="card-resource-content__top">
+                            <div class="card-resource-content__tag">
+                                <div class="one-tag one-tag__course ng-binding">Course</div>
+                            </div> 
+                            <img class="card-resource-content__feat-img" src="./assets/images/homepage/featured1.jpg">
+                        </div> 
+                        <div class="card-resource-content__info">
+                            <span class="ng-binding">OWCI 194</span>
+                            <h4 class="ng-binding">Creative Business</h4>
+                            <p class="ng-binding">by Domus Academy</p>
+                        </div>
+                    </div>
+                    <div class="card-resource-content__paper">
+                        <div class="card-resource-content__top">
+                            <div class="card-resource-content__tag">
+                                <div class="one-tag one-tag__study ng-binding">Study Abroad</div>
+                            </div> 
+                            <img class="card-resource-content__feat-img" src="./assets/images/homepage/featured2.jpg">
+                        </div>
+                        <div class="card-resource-content__info">
+                            <span class="ng-binding">UNITED STATES</span>
+                            <h4 class="ng-binding">Advanced Seminar in Entrepreneurial Strategies</h4>
+                            <p class="ng-binding">by Kendall College</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
