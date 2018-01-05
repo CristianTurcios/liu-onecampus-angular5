@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuccessTipsComponent } from './success-tips.component';
+import { SupportSuccessTipsComponent } from './support-success-tips.component';
 
-describe('SuccessTipsComponent', () => {
-  let component: SuccessTipsComponent;
-  let fixture: ComponentFixture<SuccessTipsComponent>;
+describe('SupportSuccessTipsComponent', () => {
+  let component: SupportSuccessTipsComponent;
+  let fixture: ComponentFixture<SupportSuccessTipsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SuccessTipsComponent ]
+      declarations: [ SupportSuccessTipsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SuccessTipsComponent);
+    fixture = TestBed.createComponent(SupportSuccessTipsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

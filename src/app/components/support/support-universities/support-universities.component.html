@@ -1,7 +1,7 @@
 <div *ngIf="!isLoading">
   <h1>{{findHelpFromYourUniversity._title}}</h1>
   <div class="dropdown-university--blue" *ngIf="showUniversities">
-    <input id="dropdownuniversity" type="checkbox">
+    <input id="dropdownuniversity" type="checkbox" [checked]="displaySelect">
     <label for="dropdownuniversity">
       <span class="dropdown-gray-label">{{findHelpFromYourUniversity.description}}</span>
       <i class="icon-chevron-up-simple pull-right"></i>
@@ -14,11 +14,11 @@
   </div>
 
   <div class="dropdown-university--blue" *ngIf="!showUniversities && !isLoading">
-    <input id="university" type="checkbox" ng-checked="true" ng-disabled="true">
+    <input id="university" type="checkbox" [checked]="true" [disabled]="true">
     <label for="university">
       <span class="dropdown-gray-label" (click)="changeUniversity()">{{selectedUniversity.title || selectedUniversity.name}}</span>
       
-      <i class="icon-close-simple pull-right" ng-if="!supportUniversitiesCtrl.sessionExists" ng-click="supportUniversitiesCtrl.closeHelpSupport()"></i>
+      <i class="icon-close-simple pull-right" (click)="closeHelpSupport()"></i>
     </label>
     
     <div class="content-box-university--white auth-version">

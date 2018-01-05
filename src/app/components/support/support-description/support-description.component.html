@@ -1,39 +1,5 @@
-<div>
-  <h1 class="huge-title--blue">supportDescriptionCtrl.data._title</h1>
-  <span class="upper-subtitle--blue">
-    (Esto viene del cms)
-    <h1 class="huge-title--blue ng-binding">WE ARE HERE TO HELP YOU</h1>
-  </span>
-  <div class="list-indentation">
-    <p>GENERAL SUPPORT
-      <br>
-    </p>
-    <p>Do you need assistance with one or more of the resources in OneCampus® by Laureate? Please contact our support team at
-      <a
-        href="mailto:onecampussupport@laureate.net">onecampussupport@laureate.net</a>
-        or use the LiveChat to chat with us now. We can support you with:
-    </p>
-    <ul>
-      <li>
-        Login and access issues
-        <br>
-      </li>
-      <li>
-        Video and media issues
-        <br>
-      </li>
-      <li>
-        Technical issues with video submissions
-        <br>
-      </li>
-      <li>
-        Locating information
-        <br>
-      </li>
-      <li>
-        Information regarding courses and the Learning Series
-        <br>
-      </li>
-    </ul>
-  </div>
+<div *ngIf="!isLoading">
+  <h1 class="huge-title--blue">{{data._title}}</h1>
+  <span class="upper-subtitle--blue" [innerHTML]="data.short_description"></span>
+  <div class="list-indentation" [innerHTML]="data.description"></div>
 </div>
