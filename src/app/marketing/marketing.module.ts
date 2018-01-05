@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MarketingComponent } from './marketing.component';
 import { MarketingRoutingModule } from './marketing.routing';
 
-import { HomeIntroComponent } from './intro/intro.component';
-import { HomeLearningSeriesComponent } from './learning-series/learning-series.component';
+import { MarketingIntroComponent } from './intro/intro.component';
+import { MarketingLearningSeriesComponent } from './learning-series/learning-series.component';
 
 @NgModule({
     imports: [
@@ -13,8 +13,8 @@ import { HomeLearningSeriesComponent } from './learning-series/learning-series.c
     ],
     declarations: [
         MarketingComponent,
-        HomeIntroComponent,
-        HomeLearningSeriesComponent
+        MarketingIntroComponent,
+        MarketingLearningSeriesComponent
     ]
 })
 export class MarketingModule { }

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
 import { RoutesContainer, RoutesProvider } from './app.router';
 import { HttpModule } from '@angular/http';
 
