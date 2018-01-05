@@ -6,7 +6,7 @@ import { WagtailProvider } from '../../providers/cms.providers';
     templateUrl: './learning-series.component.html',
     providers: [WagtailProvider]
 })
-export class HomeLearningSeriesComponent implements OnInit {
+export class MarketingLearningSeriesComponent implements OnInit {
     public learningPage: any = '';
 
     constructor (
