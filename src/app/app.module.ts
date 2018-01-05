@@ -9,6 +9,8 @@ import { FooterComponent } from './components/common/footer/footer.component';
 
 import { ForInstitutionsModule } from './for-institutions/for-institutions.module';
 import { MarketingModule } from './marketing/marketing.module';
+import { SupportModule } from './components/support/support.module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { MarketingModule } from './marketing/marketing.module';
     RoutesContainer,
     HttpModule,
     ForInstitutionsModule,
-    MarketingModule
+    MarketingModule,
+    SupportModule
   ],
   providers: [RoutesProvider],
   bootstrap: [AppComponent]
